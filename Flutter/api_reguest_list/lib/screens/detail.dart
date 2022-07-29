@@ -15,13 +15,18 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(id.toString())),
-      body: Column(children: [
-        Image.network(url),
-        Text(
-          title,
-          style: TextStyle(fontSize: 20),
-        )
-      ]),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 15),
+        child: Center(
+          child: Column(children: [
+            Image.network(url),
+            Text(
+              title,
+              style: TextStyle(fontSize: 20),
+            )
+          ]),
+        ),
+      ),
     );
   }
 }
